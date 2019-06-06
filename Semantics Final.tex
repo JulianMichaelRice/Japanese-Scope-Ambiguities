@@ -1,0 +1,295 @@
+% Julian Rice
+% Linguistics 165C: Semantics II Final
+% uses dvi-ps-pdf-chain to compile
+
+\documentclass[english, 11pt]{article}
+
+%\usepackage{etex}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[utf8]{inputenc}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{babel}
+\usepackage[bottom = 1in, left=1in, right=1in]{geometry}
+\usepackage{fancyhdr}	%for headers and footers
+\pagestyle{fancy}
+\usepackage{natbib}  %use if there are citations!
+\usepackage{tipa}   %for IPA
+\usepackage{amstext} 
+\usepackage{lingmacros}
+\usepackage{amsmath}
+\usepackage{qtree}    %for trees
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{tikz-qtree}
+\usepackage{stmaryrd} 
+\usepackage{arydshln} 
+\usepackage{stmaryrd} %New for double brackets
+\usepackage[colorlinks=false]{hyperref} %set colorlinks to false if you don't want colored links. comment it out if you don't want links at all.
+%\usepackage{OTtablx}	%for OT tableaux. See below for example.
+\usepackage{rotating}    %for angled text
+\usepackage{pifont} %for symbols
+\usepackage{dsfont}	%for more symbols
+\usepackage{gb4e} 	%for linguistic examples and glosses
+
+\newcommand{\dwork}{\text{\ding{83}}}
+\newcommand{\onemeaning}{\text{\ding{172}}}
+\newcommand{\twomeaning}{\text{\ding{173}}}
+
+\newcommand{\vs}{\vspace{12pt}}  % Vertical skip of 12 pts
+\newcommand{\underscore}{\underline{\hspace{0.5cm}}}  %0.5 cm long underline
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\begin{document}
+\rfoot{\thepage}  %Page Number
+\cfoot{}
+\rhead{Julian M. Rice}	  %Right Header
+\lhead{Scope Ambiguities in Japanese}  %left header
+\title{Scope Ambiguities in Japanese\\
+  \large Linguistics 165C: Semantics II
+}	%Title
+\author{Julian M. Rice}
+\date{June 7th, 2019}
+\maketitle
+%\subsection{And you can have subsections too!}
+
+\section{Introduction}
+Scope ambiguities are a commonly seen and reviewed problem when covering the semantics of languages like English. The question then arises - what scope ambiguities exist for an entirely different language, like Japanese? This paper is aiming to introduce scope ambiguities and analyze different quantifiers in Japanese and provide details on the differences between these quantifiers. First and foremost, a quantifier is defined as a linguistic expression that specify or quantify a set (source). In English, examples of quantifiers include all, every, some, few, and exactly two. Quantifiers indicate the scope of a term, usually a noun or pronoun, to which it is attached to; this intrinsically brings potential sentence ambiguity to the table. Ambiguity can be considered the presence of two or more meanings in a sentence - two meanings represents two different logical forms (LF), or syntax trees that can be drawn from a single sentence. This is demonstrated in the following English sentence:
+
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex Every student met some professor.
+			\begin {xlist} 
+				\ex \textbf{LF1}: Every single student met some professor, not necessarily the same one.
+				\ex \textbf{LF2}: Every single student met the same professor.
+			\end {xlist}
+			\ex Some student met every professor.
+				\begin {xlist} 
+					\ex \textbf{LF1}: Some specific student met every single professor.
+					\ex \textbf{LF2}: For every professor there is, each one met some student.
+				\end {xlist}
+	\end {xlist}
+\end {exe}
+\begin{equation}
+	\llbracket  [Every\:student]_{1}\:[some\:professor]_{2}\:[e_{1}\:met\:e_{2}] \rrbracket \quad
+\end{equation}
+\begin{equation}
+	\llbracket  [Some\:professor]_{2}\:[every\:student]_{1}\:[e_{1}\:met\:e_{2}] \rrbracket \quad
+\end{equation}
+(1a-i) and (1b-i) show us that the first logical form, or LF1, places the emphasis on the subject. Equation (1) describes the underlying form for LF1 of (1a-i), whereas equation (2) describes the underlying form for LF2 of (1a-ii). The full syntax trees for (1a) is displayed on Figure 1 (next page), showing the appropriate quantifier raising for the differing logical forms. In LF1, \emph{some professor} is raised first, which is then followed by the raising of \emph{every student}. This creates a subject-wide interpretation, where 
+
+% FIGURE 1: Scope Ambiguities in English (LF1 and LF2)
+\begin{figure}[!h]
+\centering
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Logical Form 1 and Logical Form 2}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){every\:student_{1}}; ] [.t [.<e,t>,t \edge[roof];\node(4){some\:professor_{2}}; ] [.t \node(1){e_{1}}; [. <e,t> met \node(3){e_{2}}; ] ] ] ]]
+		\draw [thin, dashed, ->] (1) .. controls +(south:4) and +(south:5.5) .. (2);
+		\draw [thin, dashed, ->] (3) .. controls +(south:3) and +(south:4.5) .. (4);
+	\end{tikzpicture} \hspace{50pt}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){some\:professor_{2}}; ] [.t [.<e,t>,t \edge[roof];\node(4){every\:student_{1}}; ] [.t \node(1){e_{1}}; [. <e,t> met \node(3){e_{2}}; ] ] ] ]]
+		\draw [thin, dashed, ->] (1) .. controls +(south:2) and +(south:2) .. (4);
+		\draw [thin, dashed, ->] (3) .. controls +(south:3) and +(south:5.5) .. (2);
+	\end{tikzpicture}
+\end{figure}
+
+\section{Scrambling and Ambiguity in Japanese}
+\subsection{Standard SOV and Scrambled OSV Scope Ambiguity}
+Japanese's subject-object-verb (SOV) sentence structure is canonical, meaning that only a subject wide interpretation (deemed as S>O) is available. The noun within the subject of the sentence acts as the entity that actively affects the object with the verb of the sentence. On the other hand, scrambling in Japanese, which involves switching the word order of a sentence without switching its core meaning, produces ambiguous sentences. This ambiguity only takes place when there is an existentially quantified subject and universally quantified object seen in the SOV sentence and scrambled - this is known as a QP-QP sentence (\cite{s1}).
+% Sentence 1A: Dareka-ga dono sushi-mo tabe-ta
+% Sentence 1B: Dono sushi-mo dareka-ga tabe-ta
+% Sentence 2A: Gakusei-no dareka-ga dono sushi-mo tabe-ta
+% Sentence 2B: Dono sushi-mo gakusei-no dareka-ga tabe-ta
+
+%Hello \cite{s1}
+
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Dareka-ga dono ringo-mo tabe-ta \\
+			someone-Nom every apple eat-Past. \\
+			\trans `Someone ate every apple.' }\label{1a}
+		\ex[]{
+		\gll Dono ringo-mo dareka-ga tabe-ta \\
+			every apple someone-Nom eat-Past. \\
+			\trans `Someone ate every apple (scrambled).' }\label{1b}
+	\end{xlist}
+\end{exe}
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex 
+				\begin {xlist}
+					\ex \textbf{S>O}: Person x ate every apple.\label{2ai}
+					\ex \textbf{*O>S}: For every apple y, some person ate y.\label{2aii}
+				\end {xlist}
+			\ex
+				\begin {xlist} 
+					\ex \textbf{S>O}: Person x ate every apple.\label{2bi}
+					\ex \textbf{O>S}: For every apple y, some person ate y.\label{2bii}
+				\end {xlist}
+		\end {xlist}
+\end {exe}
+In (2a) and (2b), we compare the standard SOV Japanese sentence (2a) with the scrambled OSV Japanese sentence (2b). Notice that the gloss produces the same sentence in English; as mentioned earlier, the core meaning of the sentence does not change regardless of scrambling. However, the key difference between (2a) and (2b) is demonstrated in (3). (3a) shows that the subject wide interpretation (S>O) for the SOV sentence is valid, however the object wide interpretation (O>S) is invalid, or unnatural. This implies that standardly written SOV Japanese sentences are not ambiguous. The aforementioned ambiguity with scrambled OSV sentences is demonstrated in (2b) and (3b). The universal quantifier in the object position has now been moved to the front of the sentence, and the existential quantifier has been moved to before the verb. (3b) shows that both S>O (LF1) and O>S (LF2) readings are valid, leading to scope ambiguity. 
+
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Gakusei-no dareka-ga dono kudamono-mo tabe-ta \\
+			student-Gen some-Nom every fruit eat-Past. \\
+			\trans `Some student ate every fruit.' }\label{1a}
+		\ex[]{
+		\gll Dono kudamono-mo gakusei-no dareka-ga tabe-ta \\
+			every fruit student-Gen someone-Nom eat-Past. \\
+			\trans `Some student ate every fruit (scrambled).' }\label{1b}
+	\end{xlist}
+\end{exe}
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex 
+				\begin {xlist}
+					\ex \textbf{S>O}: Student x ate every fruit.\label{2ai}
+					\ex \textbf{*O>S}: For every fruit y, some student ate y.\label{2aii}
+				\end {xlist}
+			\ex
+				\begin {xlist} 
+					\ex \textbf{S>O}: Student x ate every fruit.\label{2bi}
+					\ex \textbf{O>S}: For every fruit y, some student ate y.\label{2bii}
+				\end {xlist}
+		\end {xlist}
+\end {exe}
+Sentences in (4) further demonstrate this addition of ambiguity through scrambling. This time, however, the noun \emph{student} is added to the subject, and object has also been modified to show the ambiguity in another context. (4a) is the SOV sentence and (5a) shows that, like seen in (2a) and (3a), subject wide interpretation is accepted but object wide interpretation is not. In the scrambled OSV sentence (4b), (5b) shows scope ambiguity by indicating that both interpretations are valid. Our current findings are summarized in the table below:
+\begin{figure}[h]
+	\begin{center} \renewcommand*\arraystretch{1.2}
+	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+	\multicolumn{3}{|c||}{Subject - Object Structure} & \sc{SOV} & \sc{OSV}  \\[0.5ex]
+  	 	\hline & Universal - Existential 	& & $\onemeaning$ & $\twomeaning$ \\
+		\hline & Existential - Universal 	& & $\onemeaning$ & $\onemeaning$ \\
+   	 	\hline 
+	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+	\vspace*{-5mm}
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Japanese Scope Ambiguity Table Version I}
+\end{figure}
+\newline
+To clarify the in progress table above, we claim that, \emph{so far}, all universal quantifiers in Japanese that appear as a subject in a scrambled sentence cause scope ambiguity. However, all other quantifier placements are non ambiguous, regardless of whether the sentence has been scrambled or not. Let us explore distributive and collective interpretations in both English and Japanese to see if this is really the case.
+
+\subsection{Distributive and Collective Interpretations}
+% Define Distributive and Collective interpretations
+% Write an example using 'all' vs 'every'
+% Explain the characteristics of 'all' and 'every' in English with an example
+In English, scope ambiguity often occurs as a result of a QP-QP sentence, or sentence that contains two quantifiers (one existential and one universal quantifier). However, when the object quantifier is \emph{all}, the object-wide interpretation becomes unnatural and the sentence loses its scope ambiguity. There are two types of interpretations that apply to universal quantifiers, and quantifiers can either support one or both of the interpretations when used in their respective language.
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex Some police officer arrested every criminal.
+			\begin {xlist} 
+				\ex \textbf{LF1}: A single, individual police officer arrested every criminal.
+				\ex \textbf{LF2}: Every criminal was arrested by an officer, but not necessarily the same one.
+			\end {xlist}
+			\ex Some police officer arrested all criminals.
+				\begin {xlist} 
+					\ex \textbf{LF1}: A single, individual police officer arrested every criminal.
+					\ex \textbf{LF2}: *All criminals were arrested by an officer, but not necessarily the same one.
+				\end {xlist}
+	\end {xlist}
+\end {exe}
+As seen in (6b), when the quantifier in the object position is \emph{all}, then the second logical form that places an emphasis on object-wide interpretation (O>S) becomes unnatural, making the subject-wide interpretation (S>O) the only reading for the sentence. On the other hand, the sentence in (6a) allows two logical forms that work, and its object quantifier is \emph{every}. 
+
+The reason why \emph{every} in the object position allows scope ambiguity and \emph{all} does not allow scope ambiguity in the object position is because \emph{all} allows a \emph{collective interpretation}, whereas \emph{every} does not. A collective interpretation is when a word or collection of things can be referred to as a whole. The quantifier \emph{all} is an example of this, because when one says \emph{all}, it can refer to the entire group of whatever the quantifier is referring to as a whole. The other English quantifier, \emph{every}, is an example of a universal quantifier that does not allow a collective interpretation because saying 'every + N' (noun) cannot be referred to as a whole in any case. This is made clear in (6a). 
+
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex All the men carried a table upstairs.
+			\begin {xlist} 
+				\ex \textbf{Collective Interpretation (CI)}: The men carried one table together upstairs.
+				\ex \textbf{Distributive Interpretation (DI)}: Each of the men carried one table upstairs.
+			\end {xlist}
+			\ex Every man carried a table upstairs.
+				\begin {xlist} 
+					\ex \textbf{Collective Interpretation (CI)}: *The men carried one table together upstairs.
+					\ex \textbf{Distributive Interpretation (DI)}: Each of the men carried one table upstairs.
+				\end {xlist}
+	\end {xlist}
+\end {exe}
+The other kind of interpretation that applies to universal quantifiers is \emph{distributive interpretation}. This is defined as: a QP $\alpha$ occurring in a sentence \emph{S} supports a distributive interpretation if, under the reading, we can construe individual elements in the domain of $\alpha$ to co-vary with (the witness of) another quantifier $\beta$ that also occurs in the logical form of \emph{S} (\cite{s3}).
+
+\begin{figure}[h]
+	\begin{center} \renewcommand*\arraystretch{1.2}
+	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+	\multicolumn{3}{|c||}{English} & \sc{Distributive Interpretation} & \sc{Collective Interpretation}  \\[0.5ex]
+  	 	\hline & All 		& & $\checkmark$ & $\checkmark$ \\
+		\hline & Every 	& & $\checkmark$ & $\dwork$ \\
+   	 	\hline 
+	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+	\vspace*{-5mm}
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Universal Quantifiers & Interpretations (English)}
+\end{figure}
+\vs
+
+\subsection{Different Classes of Japanese Quantifiers}
+% Introduce the crosslinguistic Wh+N+QP universal quantifier
+% Talk about how this is DI and not CI
+% Introduce two prenominal universal quantifiers (subete-no, zenbu-no)
+% Talk about how this is DI and CI
+% Draw out a simple table with DI / CI for dono-N-mo and subete-no, as well as zenbu-no
+
+
+\section{Testing Other Japanese Quantifiers for Ambiguity}
+\vs 
+
+\subsection{Aru N}
+
+\vs
+
+\subsection{Sorezore-no}
+
+\vs
+
+\subsection{Nan-N-ka-no}
+
+\vs
+
+\subsection{Summary}
+
+\vs
+
+\section{Conclusion}
+
+\vs
+
+Referencing Tool: (\ref{1a}), \ref{1b}, \ref{2ai}, \ref{2aii}, \ref{2bi}, \ref{2bii}.
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\multicolumn{3}{|c||}{Japanese} & \sc{Distributive Interpretation} & \sc{Collective Interpretation}  \\[0.5ex]
+    \hline 1. & 	Dareka-no 		 & & $?$ & $?$ \\
+	\hline 2. & 	Dono N-mo 	 & & $\ast$ & $\checkmark$ \\
+    \hline 3. & 	Nan-N-ka-no & & $?$ & $?$ \\
+    \hline 4. & 	Aru N		 		 & & $?$ & $?$ \\
+    \hline 5. & 	Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
+    \hline 
+\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+\begin{thebibliography}{999}
+	\bibitem[Lakoff(1972)]{s1}
+	George Lakoff,
+  	\emph{Linguistics and Natural Logic}.
+  	Semantics of Natural Language,
+  	1972.
+\end{thebibliography}
+Here's an example of a citation \citep{lol}.
+
+Or here: \cite{lol}.
+
+\bibliographystyle{chicago}
+\bibliography{template}
+\end{document} 
