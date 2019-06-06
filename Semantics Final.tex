@@ -33,6 +33,7 @@
 \usepackage{gb4e} 	%for linguistic examples and glosses
 
 \newcommand{\dwork}{\text{\ding{83}}}
+\newcommand{\xmark}{\text{\ding{53}}}
 \newcommand{\onemeaning}{\text{\ding{172}}}
 \newcommand{\twomeaning}{\text{\ding{173}}}
 
@@ -181,6 +182,7 @@ Sentences in (4) further demonstrate this addition of ambiguity through scrambli
 To clarify the in progress table above, we claim that, \emph{so far}, all universal quantifiers in Japanese that appear as a subject in a scrambled sentence cause scope ambiguity. However, all other quantifier placements are non ambiguous, regardless of whether the sentence has been scrambled or not. Let us explore distributive and collective interpretations in both English and Japanese to see if this is really the case.
 
 \subsection{Distributive and Collective Interpretations}
+\subsubsection{English Interpretations}
 % Define Distributive and Collective interpretations
 % Write an example using 'all' vs 'every'
 % Explain the characteristics of 'all' and 'every' in English with an example
@@ -219,21 +221,45 @@ The reason why \emph{every} in the object position allows scope ambiguity and \e
 				\end {xlist}
 	\end {xlist}
 \end {exe}
-The other kind of interpretation that applies to universal quantifiers is \emph{distributive interpretation}. This is defined as: a QP $\alpha$ occurring in a sentence \emph{S} supports a distributive interpretation if, under the reading, we can construe individual elements in the domain of $\alpha$ to co-vary with (the witness of) another quantifier $\beta$ that also occurs in the logical form of \emph{S} (\cite{s3}).
-
+The other kind of interpretation that applies to universal quantifiers is \emph{distributive interpretation}. This is defined as: a QP $\alpha$ occurring in a sentence \emph{S} supports a distributive interpretation if, under the reading, we can construe individual elements in the domain of $\alpha$ to co-vary with (the witness of) another quantifier $\beta$ that also occurs in the logical form of \emph{S} (\cite{s3}). The two variations in (7) show that \emph{all} in the subject position allows for collective interpretation, whereas \emph{every} in the subject position does not.
 \begin{figure}[h]
 	\begin{center} \renewcommand*\arraystretch{1.2}
 	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
-	\multicolumn{3}{|c||}{English} & \sc{Distributive Interpretation} & \sc{Collective Interpretation}  \\[0.5ex]
+	\multicolumn{3}{|c||}{English} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
   	 	\hline & All 		& & $\checkmark$ & $\checkmark$ \\
 		\hline & Every 	& & $\checkmark$ & $\dwork$ \\
    	 	\hline 
 	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 	\vspace*{-5mm}
 	\captionsetup{labelfont=bf}
-	\caption[labelfont=bf]{Universal Quantifiers & Interpretations (English)}
+	\caption[labelfont=bf]{Universal Quantifiers and Interpretations (English)}
 \end{figure}
-\vs
+\newline
+It may be fair to assume that the fact that \emph{every} cannot be used for collective interpretations acts as a key reason as to why \emph{every} creates ambiguity when placed in the object position of an SOV sentence. The important points to take away from the data in (6) and (7) is the following:
+\begin{itemize}
+	\item When \emph{all} is in the subject position, there is scope ambiguity.
+	\item When \emph{all} is in the object position, there is no scope ambiguity.
+	\item When \emph{every} is in the subject position, there is scope ambiguity.
+	\item When \emph{every} is in the object position, there is scope ambiguity.
+\end{itemize}
+
+\subsubsection{Japanese Interpretations}
+Given that we have a background of the nature behind universal quantifiers with different interpretations in English, it is time to observe Japanese universal quantifiers and find what traits they may that may relate or differentiate Japanese from English. For now, we will compare \emph{dono-N-mo} (every) with \emph{subete-no} (all).
+
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Dono gakusei-mo piza-o tabe-owat-ta \\
+			every student-Gen pizza-Acc eat-finish-Past. \\
+			\trans `Every student ate a/the pizza.' }\label{1a}
+		\ex[]{
+		\gll Subete-no gakusei-wa piza-o tabe-owat-ta \\
+			all-Gen student-Top pizza-Acc eat-Finish-Past. \\
+			\trans `All students ate a/the pizza.' }\label{1b}
+	\end{xlist}
+\end{exe}
+
 
 \subsection{Different Classes of Japanese Quantifiers}
 % Introduce the crosslinguistic Wh+N+QP universal quantifier
@@ -246,20 +272,70 @@ The other kind of interpretation that applies to universal quantifiers is \emph{
 \section{Testing Other Japanese Quantifiers for Ambiguity}
 \vs 
 
-\subsection{Aru N}
+\subsection{Zenbu-no}
+\emph{Zenbu-no} means all, and uses the same Kanji character for \emph{zen} as the \emph{sube} in the previously covered \emph{subete-no}. 
+\vs
 
+\subsection{Minna}
+\emph{Minna} means every (living) entity within a certain location.
+\vs
+
+\subsection{Aru-N and Aru-N-tati}
+\emph{Aru-N} is an existential quantifier that means \emph{some}. Unlike \emph{dareka}, which allows for both singular and plural regardless of the noun it is referencing (if it exists), \emph{aru-N} is a quantifier that can only be used with singular nouns when the noun is singular, and can only be used with plural nouns when the noun \emph{aru-N} is attached to has been pluralized and there is animacy. To summarize this, \emph{aru-N}'s meaning changes in terms of mass and count depending on the plurality and animacy of the noun that it is attached to.
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some student met every professor.' }\label{1a}
+		\ex[]{
+		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some students met every professor.' }\label{1b}
+		\ex[]{
+		\gll Subete-no gakusei-ga aru-tatemono-wo nagame-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `All the students gazed at a building.' }\label{1b}
+		\ex[*]{
+		\gll Subete-no gakusei-ga aru-tatemono-tati-wo nagame-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `All the students gazed at the buildings.' }\label{1b}
+	\end{xlist}
+\end{exe}
 \vs
 
 \subsection{Sorezore-no}
 
 \vs
 
-\subsection{Nan-N-ka-no}
+\subsection{Nan-*-ka-no-N}
 
 \vs
 
 \subsection{Summary}
-
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\multicolumn{3}{|c||}{Japanese UQ} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
+	%\hline & &	Dareka-no 		 & & $?$ & $?$ \\
+	\hline & Dono N-mo 	 & & $\ast$ & $\checkmark$ \\
+	%\hline & &	Nan-N-ka-no & & $?$ & $?$ \\
+	%\hline & &	Aru N		 		 & & $?$ & $?$ \\
+	\hline & Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
+	\hline & Zenbu-no 	& & $\checkmark$ & $\checkmark$ \\
+	\hline & Minna		 	& & $\checkmark$ & $\checkmark$ \\
+	\hline 
+\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+\vs
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|c|c|c|} \hline 
+\multicolumn{5}{|c|}{Student Q} & \sc{Plural} & \sc{Pizza Q} & \sc{Result} & \sc{Comment}  \\[0.5ex]
+	\hline & &	& & Aru+N  & $\xmark$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{1 person ate 1 pizza}$ \\
+	\hline & &	& & Aru+N & $-Tati$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{2+ people ate 1 pizza together}$ \\
+	%\hline & &	Nan-N-ka-no & & $?$ & $?$ \\
+	%\hline & &	Aru N		 		 & & $?$ & $?$ \\
+	\hline 
+\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 \vs
 
 \section{Conclusion}
@@ -268,16 +344,6 @@ The other kind of interpretation that applies to universal quantifiers is \emph{
 
 Referencing Tool: (\ref{1a}), \ref{1b}, \ref{2ai}, \ref{2aii}, \ref{2bi}, \ref{2bii}.
 
-\begin{center} \renewcommand*\arraystretch{1.2}
-\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
-\multicolumn{3}{|c||}{Japanese} & \sc{Distributive Interpretation} & \sc{Collective Interpretation}  \\[0.5ex]
-    \hline 1. & 	Dareka-no 		 & & $?$ & $?$ \\
-	\hline 2. & 	Dono N-mo 	 & & $\ast$ & $\checkmark$ \\
-    \hline 3. & 	Nan-N-ka-no & & $?$ & $?$ \\
-    \hline 4. & 	Aru N		 		 & & $?$ & $?$ \\
-    \hline 5. & 	Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
-    \hline 
-\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
 \begin{thebibliography}{999}
 	\bibitem[Lakoff(1972)]{s1}
