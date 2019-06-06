@@ -2,18 +2,12 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Semantics Final.aux
 The style file: chicago.bst
-I couldn't open database file template.bib
----line 59 of file Semantics Final.aux
- : \bibdata{template
- :                  }
-I'm skipping whatever remains of this command
-I found no database files---while reading file Semantics Final.aux
+I found no \bibdata command---while reading file Semantics Final.aux
 Warning--I didn't find a database entry for "s1"
 Warning--I didn't find a database entry for "s3"
-Warning--I didn't find a database entry for "lol"
 You've used 0 entries,
             2861 wiz_defined-function locations,
-            615 strings with 4882 characters,
+            613 strings with 4871 characters,
 and the built_in function-call counts, 17 in all, are:
 = -- 0
 > -- 0
@@ -52,4 +46,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There were 2 error messages)
+(There was 1 error message)

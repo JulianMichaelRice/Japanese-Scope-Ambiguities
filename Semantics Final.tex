@@ -73,10 +73,10 @@ Scope ambiguities are a commonly seen and reviewed problem when covering the sem
 	\end {xlist}
 \end {exe}
 \begin{equation}
-	\llbracket  [Every\:student]_{1}\:[some\:professor]_{2}\:[e_{1}\:met\:e_{2}] \rrbracket \quad
+	\llbracket  \text{[Every\:student]}_{1}\:\text{[some\:professor]}_{2}\:[e_{1}\:\text{met}\:e_{2}] \rrbracket \quad
 \end{equation}
 \begin{equation}
-	\llbracket  [Some\:professor]_{2}\:[every\:student]_{1}\:[e_{1}\:met\:e_{2}] \rrbracket \quad
+	\llbracket  \text{[Some\:professor]}_{2}\:\text{[every\:student]}_{1}\:[e_{1}\:\text{met}\:e_{2}] \rrbracket \quad
 \end{equation}
 (1a-i) and (1b-i) show us that the first logical form, or LF1, places the emphasis on the subject. Equation (1) describes the underlying form for LF1 of (1a-i), whereas equation (2) describes the underlying form for LF2 of (1a-ii). The full syntax trees for (1a) is displayed on Figure 1 (next page), showing the appropriate quantifier raising for the differing logical forms. In LF1, \emph{some professor} is raised first, which is then followed by the raising of \emph{every student}. This creates a subject-wide interpretation, where 
 
@@ -84,28 +84,24 @@ Scope ambiguities are a commonly seen and reviewed problem when covering the sem
 \begin{figure}[!h]
 \centering
 	\captionsetup{labelfont=bf}
-	\caption[labelfont=bf]{Logical Form 1 and Logical Form 2}
+	\caption[labelfont=bf]{Logical Form 1 and Logical Form 2 for (1a)}
 	\begin{tikzpicture}[scale = 0.7]
 		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){every\:student_{1}}; ] [.t [.<e,t>,t \edge[roof];\node(4){some\:professor_{2}}; ] [.t \node(1){e_{1}}; [. <e,t> met \node(3){e_{2}}; ] ] ] ]]
-		\draw [thin, dashed, ->] (1) .. controls +(south:4) and +(south:5.5) .. (2);
-		\draw [thin, dashed, ->] (3) .. controls +(south:3) and +(south:4.5) .. (4);
+		\draw [thin, dashed, ->] (1) .. controls +(south:3) and +(south:4.5) .. (2);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:3.5) .. (4);
 	\end{tikzpicture} \hspace{50pt}
 	\begin{tikzpicture}[scale = 0.7]
 		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){some\:professor_{2}}; ] [.t [.<e,t>,t \edge[roof];\node(4){every\:student_{1}}; ] [.t \node(1){e_{1}}; [. <e,t> met \node(3){e_{2}}; ] ] ] ]]
 		\draw [thin, dashed, ->] (1) .. controls +(south:2) and +(south:2) .. (4);
-		\draw [thin, dashed, ->] (3) .. controls +(south:3) and +(south:5.5) .. (2);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:4.5) .. (2);
 	\end{tikzpicture}
 \end{figure}
 
+%------------------------------------------------------------
 \section{Scrambling and Ambiguity in Japanese}
+%------------------------------------------------------------
 \subsection{Standard SOV and Scrambled OSV Scope Ambiguity}
 Japanese's subject-object-verb (SOV) sentence structure is canonical, meaning that only a subject wide interpretation (deemed as S>O) is available. The noun within the subject of the sentence acts as the entity that actively affects the object with the verb of the sentence. On the other hand, scrambling in Japanese, which involves switching the word order of a sentence without switching its core meaning, produces ambiguous sentences. This ambiguity only takes place when there is an existentially quantified subject and universally quantified object seen in the SOV sentence and scrambled - this is known as a QP-QP sentence (\cite{s1}).
-% Sentence 1A: Dareka-ga dono sushi-mo tabe-ta
-% Sentence 1B: Dono sushi-mo dareka-ga tabe-ta
-% Sentence 2A: Gakusei-no dareka-ga dono sushi-mo tabe-ta
-% Sentence 2B: Dono sushi-mo gakusei-no dareka-ga tabe-ta
-
-%Hello \cite{s1}
 
 \begin{exe}
 	\ex 
@@ -165,7 +161,29 @@ In (2a) and (2b), we compare the standard SOV Japanese sentence (2a) with the sc
 				\end {xlist}
 		\end {xlist}
 \end {exe}
-Sentences in (4) further demonstrate this addition of ambiguity through scrambling. This time, however, the noun \emph{student} is added to the subject, and object has also been modified to show the ambiguity in another context. (4a) is the SOV sentence and (5a) shows that, like seen in (2a) and (3a), subject wide interpretation is accepted but object wide interpretation is not. In the scrambled OSV sentence (4b), (5b) shows scope ambiguity by indicating that both interpretations are valid. Our current findings are summarized in the table below:
+Sentences in (4) further demonstrate this addition of ambiguity through scrambling. This time, however, the noun \emph{student} is added to the subject, and object has also been modified to show the ambiguity in another context. (4a) is the SOV sentence and (5a) shows that, like seen in (2a) and (3a), subject wide interpretation is accepted but object wide interpretation is not. In the scrambled OSV sentence (4b), (5b) shows scope ambiguity by indicating that both interpretations are valid. The syntactic tree structure with quantify raising for (4b) is shown below in Figure 2 and its two respective underlying forms are shown in equation (3) and (4). Our current findings are summarized in Figure 3.
+\begin{equation}
+	\llbracket  \text{[Gakusei-no\:dareka-ga]}_{1}\:\text{[dono\:kudamono-mo]}_{2}\:[e_{1}\:e_{2}\:\text{tabe-ta}] \rrbracket \quad
+\end{equation}
+\begin{equation}
+	\llbracket  \text{[Dono\:kudamono-mo]}_{2}\:\text{[gakusei-no\:dareka-ga]}_{1}\:[e_{1}\:e_{2}\:\text{tabe-ta}] \rrbracket \quad
+\end{equation}
+
+\begin{figure}[!h]
+\centering
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Logical Form 1 and Logical Form 2 for (4b)}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){Gakusei-no\:dareka-ga_{1}}; ] [.t [.<e,t>,t \edge[roof];\node(4){dono\:kudamono-mo_{2}}; ] [.t \node(1){e_{1}}; [. <e,t> \node(3){e_{2}}; {tabe-ta} ] ] ] ]]
+		\draw [thin, dashed, ->] (1) .. controls +(south:3) and +(south:4.5) .. (2);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:3.5) .. (4);
+	\end{tikzpicture} \hspace{20pt}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){Dono\:kudamono-mo_{2}}; ] [.t [.<e,t>,t \edge[roof];\node(4){gakusei-no\:dareka-ga_{1}}; ] [.t \node(1){e_{1}}; [. <e,t> \node(3){e_{2}}; {tabe-ta} ] ] ] ]]		\draw [thin, dashed, ->] (1) .. controls +(south:1.5) and +(south:1.5) .. (4);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:4.5) .. (2);
+	\end{tikzpicture}
+\end{figure}
+Figure 2 contains the tree structures for both interpretations of the scrambled OSV sentence in (4b). Both readings are seen in equations (3) and (4) and their explanations are listed in (5b). Sentence (4a) only has one logical form, meaning that although (5a-i) may be represented as a tree structure, (5a-ii) cannot. Notice that despite the scrambling, the underlying form displayed in Figure 2 for logical form 1 has the same underlying form as (4a). This means that scrambling \emph{maintains the original meaning} of the sentence \emph{and} it adds a second, new underlying form to the sentence.
 \begin{figure}[h]
 	\begin{center} \renewcommand*\arraystretch{1.2}
 	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
@@ -178,9 +196,10 @@ Sentences in (4) further demonstrate this addition of ambiguity through scrambli
 	\captionsetup{labelfont=bf}
 	\caption[labelfont=bf]{Japanese Scope Ambiguity Table Version I}
 \end{figure}
-\newline
-To clarify the in progress table above, we claim that, \emph{so far}, all universal quantifiers in Japanese that appear as a subject in a scrambled sentence cause scope ambiguity. However, all other quantifier placements are non ambiguous, regardless of whether the sentence has been scrambled or not. Let us explore distributive and collective interpretations in both English and Japanese to see if this is really the case.
+\newline \newline
+To clarify the in progress table above, we claim that, \emph{so far}, all universal quantifiers in Japanese that appear as a subject in a scrambled sentence cause scope ambiguity. \text{\onemeaning} represents sentences with a single underlying form, and \text{\twomeaning} represents sentences with two underlying forms (scope ambiguity). However, all other quantifier placements are non ambiguous, regardless of whether the sentence has been scrambled or not. Let us explore distributive and collective interpretations in both English and Japanese to see if this is really the case.
 
+%------------------------------------------------------------
 \subsection{Distributive and Collective Interpretations}
 \subsubsection{English Interpretations}
 % Define Distributive and Collective interpretations
@@ -235,7 +254,7 @@ The other kind of interpretation that applies to universal quantifiers is \emph{
 	\caption[labelfont=bf]{Universal Quantifiers and Interpretations (English)}
 \end{figure}
 \newline
-It may be fair to assume that the fact that \emph{every} cannot be used for collective interpretations acts as a key reason as to why \emph{every} creates ambiguity when placed in the object position of an SOV sentence. The important points to take away from the data in (6) and (7) is the following:
+It may be fair to assume that the fact that \emph{every} cannot be used for collective interpretations acts as a key reason as to why \emph{every} creates ambiguity when placed in the object position of an SOV sentence. The important points to take away from the data in (6) and (7) for QP-QP sentences is the following:
 \begin{itemize}
 	\item When \emph{all} is in the subject position, there is scope ambiguity.
 	\item When \emph{all} is in the object position, there is no scope ambiguity.
@@ -244,22 +263,48 @@ It may be fair to assume that the fact that \emph{every} cannot be used for coll
 \end{itemize}
 
 \subsubsection{Japanese Interpretations}
-Given that we have a background of the nature behind universal quantifiers with different interpretations in English, it is time to observe Japanese universal quantifiers and find what traits they may that may relate or differentiate Japanese from English. For now, we will compare \emph{dono-N-mo} (every) with \emph{subete-no} (all).
-
+Given that we have a background of the nature behind universal quantifiers with different interpretations in English, it is time to observe Japanese universal quantifiers and find what traits they may that may relate or differentiate Japanese from English. For now, we will compare \emph{dono-N-mo} (every) with \emph{subete-no} (all) with sentences that each only contain a single quantifier.
 \begin{exe}
 	\ex 
 	\begin{xlist}
 		\ex[]{
+		\gll Subete-no gakusei-wa piza-o tabe-owat-ta \\
+			all-Gen student-Top pizza-Acc eat-finish-Past. \\
+			\trans `All students ate a/the pizza.' }\label{1b}
+		\ex[]{
 		\gll Dono gakusei-mo piza-o tabe-owat-ta \\
 			every student-Gen pizza-Acc eat-finish-Past. \\
 			\trans `Every student ate a/the pizza.' }\label{1a}
-		\ex[]{
-		\gll Subete-no gakusei-wa piza-o tabe-owat-ta \\
-			all-Gen student-Top pizza-Acc eat-Finish-Past. \\
-			\trans `All students ate a/the pizza.' }\label{1b}
 	\end{xlist}
 \end{exe}
-
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex Subete-no gakusei-wa piza-o tabe-owat-ta.
+				\begin {xlist} 
+					\ex \textbf{Collective Interpretation (CI)}: All the students ate a single pizza together.
+					\ex \textbf{Distributive Interpretation (DI)}: Each and every student ate a pizza themselves.
+				\end {xlist}
+			\ex Dono gakusei-mo piza-o tabe-owat-ta.
+			\begin {xlist} 
+				\ex \textbf{Collective Interpretation (CI)}: *All the students ate a single pizza together.
+				\ex \textbf{Distributive Interpretation (DI)}: Each and every student ate a pizza themselves.
+			\end {xlist}
+	\end {xlist}
+\end {exe}
+As seen in (8), 
+\begin{figure}[h]
+	\begin{center} \renewcommand*\arraystretch{1.2}
+	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+	\multicolumn{3}{|c||}{Japanese} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
+  	 	\hline & Subete-no 		& & $\checkmark$ & $\checkmark$ \\
+		\hline & Dono-N-mo		& & $\checkmark$ & $\dwork$ \\
+   	 	\hline 
+	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+	\vspace*{-5mm}
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Universal Quantifiers and Interpretations I (Japanese)}
+\end{figure}
 
 \subsection{Different Classes of Japanese Quantifiers}
 % Introduce the crosslinguistic Wh+N+QP universal quantifier
@@ -267,21 +312,58 @@ Given that we have a background of the nature behind universal quantifiers with 
 % Introduce two prenominal universal quantifiers (subete-no, zenbu-no)
 % Talk about how this is DI and CI
 % Draw out a simple table with DI / CI for dono-N-mo and subete-no, as well as zenbu-no
+According to research done by (\cite{s1}) and (\cite{s1}), there are two types of universal quantifiers in Japanese. One type is the \emph{simple universal quantifier}, which is a quantifier that permits a variety of scope relations. Previously used terminology would imply that simple universal quantifiers are quantifiers that allow for both a collective and distributive interpretation. In Japanese, examples of this type of quantifier include \emph{subete-no}, \emph{zenbu-no}, and \emph{minna}, which all roughly translate to the English \emph{all}. 
 
+Another type of universal quantifier in Japanese is a unique, crosslinguistic \emph{distributive-key universal quantifier}. The structure for this kind of universal quantifier follows a Wh+Noun+QP structure, which requires a noun to be stuck in between a Wh word (like what, when, or how) and a quantifier particle. This special class of quantifiers forces the subject NP within the Wh-N-QP structure to have a wide scope (\cite{s3}). This means that the collective interpretation is rendered ungrammatical, and only the distributive interpretation is accepted as a valid meaning for a sentence that uses a distributive-key universal quantifier.
+
+\begin{figure}[h]
+	\begin{center} \renewcommand*\arraystretch{1.2}
+	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+	\multicolumn{3}{|c||}{Japanese} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
+  	 	\hline & Simple UQ 		& & $\checkmark$ & $\checkmark$ \\
+		\hline & Distributive-key UQ & & $\checkmark$ & $\dwork$ \\
+   	 	\hline 
+	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+	\vspace*{-5mm}
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Universal Quantifiers and Interpretations II (Japanese)}
+\end{figure}
 
 \section{Testing Other Japanese Quantifiers for Ambiguity}
-\vs 
-
 \subsection{Zenbu-no}
 \emph{Zenbu-no} means all, and uses the same Kanji character for \emph{zen} as the \emph{sube} in the previously covered \emph{subete-no}. 
-\vs
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Subete-no gakusei-wa piza-o tabe-owat-ta \\
+			all-Gen student-Top pizza-Acc eat-Finish-Past. \\
+			\trans `All students ate a/the pizza.' }\label{1b}
+		\ex[]{
+		\gll Zenbu-no gakusei-wa piza-o tabe-owat-ta \\
+			all-Gen student-Top pizza-Acc eat-Finish-Past. \\
+			\trans `All students ate a/the pizza.' }\label{1b}
+	\end{xlist}
+\end{exe}
 
 \subsection{Minna}
 \emph{Minna} means every (living) entity within a certain location.
-\vs
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some student met every professor.' }\label{1a}
+		\ex[]{
+		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some students met every professor.' }\label{1b}
+	\end{xlist}
+\end{exe}
 
 \subsection{Aru-N and Aru-N-tati}
-\emph{Aru-N} is an existential quantifier that means \emph{some}. Unlike \emph{dareka}, which allows for both singular and plural regardless of the noun it is referencing (if it exists), \emph{aru-N} is a quantifier that can only be used with singular nouns when the noun is singular, and can only be used with plural nouns when the noun \emph{aru-N} is attached to has been pluralized and there is animacy. To summarize this, \emph{aru-N}'s meaning changes in terms of mass and count depending on the plurality and animacy of the noun that it is attached to.
+\emph{Aru-N} is an existential quantifier that means \emph{some}. Unlike \emph{dareka}, which allows for both singular and plural regardless of the noun it is referencing (if it exists), \emph{aru-N} is a quantifier that can only be used with singular nouns when the noun is singular, and can only be used with plural nouns when the noun \emph{aru-N} is attached to has been pluralized and there is animacy. The pluralized form of \emph{aru-N} is \emph{aru-N-tati}, and only applies to animated nouns. To summarize, \emph{aru-N}'s meaning changes in terms of mass and count depending on the plurality and animacy of the noun that it is attached to.
 \begin{exe}
 	\ex 
 	\begin{xlist}
@@ -294,6 +376,14 @@ Given that we have a background of the nature behind universal quantifiers with 
 			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
 			\trans `Some students met every professor.' }\label{1b}
 		\ex[]{
+		\gll Zenbu-no kyoujyu-ni aru gakusei-ga at-ta. \\
+			some student-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some student met every professor. (scrambled)' }\label{1a}
+		\ex[]{
+		\gll Zenbu-no kyoujyu-ni aru gakusei-tati-ga at-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some students met every professor. (scrambled)' }\label{1b}
+		\ex[]{
 		\gll Subete-no gakusei-ga aru-tatemono-wo nagame-ta. \\
 			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
 			\trans `All the students gazed at a building.' }\label{1b}
@@ -303,59 +393,89 @@ Given that we have a background of the nature behind universal quantifiers with 
 			\trans `All the students gazed at the buildings.' }\label{1b}
 	\end{xlist}
 \end{exe}
+As demonstrated in (?), 
 \vs
 
 \subsection{Sorezore-no}
-
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some student met every professor.' }\label{1a}
+		\ex[]{
+		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some students met every professor.' }\label{1b}
+	\end{xlist}
+\end{exe}
 \vs
 
 \subsection{Nan-*-ka-no-N}
-
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex[]{
+		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some student met every professor.' }\label{1a}
+		\ex[]{
+		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
+			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
+			\trans `Some students met every professor.' }\label{1b}
+	\end{xlist}
+\end{exe}
 \vs
 
 \subsection{Summary}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
 \multicolumn{3}{|c||}{Japanese UQ} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
-	%\hline & &	Dareka-no 		 & & $?$ & $?$ \\
 	\hline & Dono N-mo 	 & & $\ast$ & $\checkmark$ \\
-	%\hline & &	Nan-N-ka-no & & $?$ & $?$ \\
-	%\hline & &	Aru N		 		 & & $?$ & $?$ \\
 	\hline & Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
 	\hline & Zenbu-no 	& & $\checkmark$ & $\checkmark$ \\
 	\hline & Minna		 	& & $\checkmark$ & $\checkmark$ \\
 	\hline 
 \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
-\vs
-\begin{center} \renewcommand*\arraystretch{1.2}
-\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|c|c|c|} \hline 
-\multicolumn{5}{|c|}{Student Q} & \sc{Plural} & \sc{Pizza Q} & \sc{Result} & \sc{Comment}  \\[0.5ex]
-	\hline & &	& & Aru+N  & $\xmark$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{1 person ate 1 pizza}$ \\
-	\hline & &	& & Aru+N & $-Tati$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{2+ people ate 1 pizza together}$ \\
-	%\hline & &	Nan-N-ka-no & & $?$ & $?$ \\
-	%\hline & &	Aru N		 		 & & $?$ & $?$ \\
-	\hline 
-\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
-\vs
+
+\begin{center}
+\scalebox{1}[1]{\begin{tabular}{|l|c|c|c|p{5cm}|} \hline
+	\sc{Student Q} & \sc{Plural} & \sc{Pizza Q} & \sc{LF} & \sc{Meaning} \\ \hline
+	Aru+N & $\xmark$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{1 student ate 1 pizza}$ \\ \hline
+	Aru+N & $-tati$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{2+ students ate 1 pizza together}$ \\ \hline
+	Aru+N & $\xmark$ & $\text{Sorezore-no}$ & $\onemeaning$ & $\text{1 student ate 1 pizza}$ \\ \hline
+	Aru+N & $-tati$ & $\text{Sorezore-no}$ & $\onemeaning$ & $\text{2+ student ate 1 pizza together}$ \\ \hline
+	Aru+N & $\xmark$ & $\text{Nan-mai-ka-no}$ & $\onemeaning$ & $\text{1 student ate some number of pizzas}$ \\ \hline
+	Aru+N & $-tati$ & $\text{Nan-mai-ka-no}$ & $\onemeaning$ & $\text{2+ students ate some number of pizzas together}$ \\ \hline
+\end{tabular}}
+\end{center}
 
 \section{Conclusion}
 
 \vs
 
-Referencing Tool: (\ref{1a}), \ref{1b}, \ref{2ai}, \ref{2aii}, \ref{2bi}, \ref{2bii}.
-
-
 \begin{thebibliography}{999}
 	\bibitem[Lakoff(1972)]{s1}
 	George Lakoff,
   	\emph{Linguistics and Natural Logic}.
-  	Semantics of Natural Language,
+  	Semantics of Natural Language, pp. 545-665,
   	1972.
+  	\bibitem[Marsden(2009)]{s2}
+	Heather Marsden,
+  	\emph{Distributive Quantifier Scope in English-Japanese and Korean-Japanese Interlanguage}.
+  	Language Acquisition, vol. 16, no. 3, pp. 135-177,
+  	2009.
+  	\bibitem[Bach(1995)]{s3}
+	Emmon Bach, Eloise Jelinek, Angelika Kratzer, Barbara H. Partee,
+  	\emph{Quantification in Natural Languages}.
+  	Kluwer Academic Publishers, pp. 340-342,
+  	1995.
+  	\bibitem[Kuno(1999)]{s4}
+	Susumu Kuno, Kenichi Takami, Yuru Wu,
+  	\emph{Quantifier Scope in English, Chinese, and Japanese}.
+  	Linguistic Society of America, vol. 75, no. 1, pp. 105-111,
+  	1999.
 \end{thebibliography}
-Here's an example of a citation \citep{lol}.
-
-Or here: \cite{lol}.
-
 \bibliographystyle{chicago}
-\bibliography{template}
 \end{document} 
