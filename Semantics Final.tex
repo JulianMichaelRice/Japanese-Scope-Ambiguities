@@ -347,23 +347,6 @@ Another type of universal quantifier in Japanese is a unique, crosslinguistic \e
 \end{exe}
 The glossing in (10) shows the lack of any kind of difference between \emph{zenbu-no} and \emph{subete-no} from a semantic and syntactic standpoint. More analysis into the ontological reasons as to why these two different words exist reveals that \emph{zenbu-no} is a Japanese word with an onyomi reading, or a reading that is derived from Chinese pronunciations. On the other hand, \emph{subete-no} is a quantifier with a kunyomi reading, or a reading that follows the pronunciation for the original, native Japanese readings, hence the same Kanji character being used for \emph{zenbu} and \emph{subete}.
 
-\subsection{Minna}
-\emph{Minna} means every (living) entity within a certain location.
-\begin{exe}
-	\ex 
-	\begin{xlist}
-		\ex[]{
-		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some student met every professor.' }\label{1a}
-		\ex[]{
-		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some students met every professor.' }\label{1b}
-	\end{xlist}
-\end{exe}
-
-
 \subsection{Aru-N and Aru-N-tati}
 \emph{Aru-N} is an existential quantifier that means \emph{some}. Unlike \emph{dareka}, which allows for both singular and plural regardless of the noun it may be referencing, \emph{aru-N} is a quantifier that can only be used with singular nouns when the noun is singular, and can only be used with plural nouns when the noun \emph{aru-N} is attached to has been pluralized and there is animacy. The pluralized form of \emph{aru-N} is \emph{aru-N-tati}, and only applies to animated nouns. To summarize, \emph{aru-N}'s meaning changes in terms of mass and count depending on the plurality and animacy of the noun that it is attached to.
 \begin{exe}
@@ -395,26 +378,56 @@ The glossing in (10) shows the lack of any kind of difference between \emph{zenb
 			\trans `All the students gazed at the buildings.' }\label{1b}
 	\end{xlist}
 \end{exe}
-As demonstrated in (?), 
-\vs
+As demonstrated in (11), \emph{Aru-N} seems to either have the English interpretation \emph{a}, \emph{the}, or \emph{some}, depending on the context in which it is used. However, using this with a pluralized noun requires the noun to be animated, otherwise the sentence becomes ungrammatical as seen in (11f). The scrambled versions of (11a) and (11b), listed as (11c) and (11d), are both ambiguous because \emph{zenbu-no} is set in the object position and moved towards the front. With the data above, we can infer that (11e) is not ambiguous, but a scrambled version of (11e) would be ambiguous.
 
 \subsection{Sorezore-no}
+\emph{Sorezore-no} is a universal quantifier that means \emph{each} or \emph{each of}. It is different from \emph{zenbu-no} and \emph{subete-no} because it only accepts a distributive interpretation. However, it does not follow the same structure as the other distributive-key universal quantifier, \emph{dono-N-mo}, as it does not follow the wh word + noun + quantifier particle rule set for \emph{dono-N-mo}. As discussed in section 2.1, a universal quantifier in the object position of a scrambled Japanese QP-QP sentence with an existential quantifier in the subject position should result in a sentence with two readings. Let us take a closer look at this phenomenom with \emph{sorezore-no}.
 \begin{exe}
-	\ex 
-	\begin{xlist}
-		\ex[]{
-		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some student met every professor.' }\label{1a}
-		\ex[]{
-		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some students met every professor.' }\label{1b}
-	\end{xlist}
+	\ex[]{
+	\gll sorezore-no hantaa-wo aru kuma-ga  korosi-ta. \\
+		each-Gen hunter-Acc some bear-Nom kill-Past. \\
+		\trans `Some bear killed each hunter. (scrambled)' }\label{1a}
 \end{exe}
-\vs
+\begin {exe}
+	\ex Sorezore-no hantaa-wo aru kuma-ga korosi-ta. (scrambled)
+		\begin {xlist} 
+			\ex \textbf{Collective Interpretation (CI)}: Each hunter was killed by the same bear.
+			\ex \textbf{Distributive Interpretation (DI)}: Each hunter was killed by a different bear.
+		\end {xlist}
+\end {exe}
+\begin{equation}
+	\text{CI:\:} \llbracket  \text{[Aru\:kuma-ga]}_{2}\:\text{[Sorezore-no\:hantaa-wo]}_{1}\:[e_{1}\:e_{2}\:\text{korosi-ta}] \rrbracket \quad
+\end{equation}
+\begin{equation}
+	\text{DI:\:} \llbracket  \text{[Sorezore-no\:hantaa-wo]}_{1}\:\text{[aru\:kuma-ga]}_{2}\:[e_{1}\:e_{2}\:\text{korosi-ta}] \rrbracket \quad
+\end{equation}
+\begin{figure}[!h]
+\centering
+	\captionsetup{labelfont=bf}
+	\caption[labelfont=bf]{Logical Form 1 (CI) and Logical Form 2 (DI) for (12)}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){Aru\:kuma-ga_{2}}; ] [.t [.<e,t>,t \edge[roof];\node(4){sorezore-no\:hantaa-wo_{1}}; ] [.t \node(3){e_{1}}; [. <e,t> \node(1){e_{2}}; {korosi-ta} ] ] ] ]]
+		\draw [thin, dashed, ->] (1) .. controls +(south:3) and +(south:4.5) .. (2);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:3.5) .. (4);
+	\end{tikzpicture} \hspace{20pt}
+	\begin{tikzpicture}[scale = 0.7]
+		\Tree [.t  [.<e,t>,t \edge[roof];\node(2){Sorezore-no\:hantaa-wo_{1}}; ] [.t [.<e,t>,t \edge[roof];\node(4){Aru\:kuma-ga_{2}}; ] [.t \node(3){e_{1}}; [. <e,t> \node(1){e_{2}}; {korosi-ta} ] ] ] ]]		\draw [thin, dashed, ->] (1) .. controls +(south:3) and +(south:3.5) .. (4);
+		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:3.5) .. (2);
+	\end{tikzpicture}
+\end{figure} \newline
+Following the scrambled sentence in (12), the universal quantifier \emph{sorezore-no} placed in the front of the sentence allows for an ambiguous (both collective and distributive) reading given that an existential quantifier like \emph{aru-N} is used. When the sentence is not scrambled, the distributive interpretation applies, saying that the same bear killed each hunter. Note that the equations (5) and (6) refer to the placement of each quantifier phrase in the scrambled form of (12), \emph{e_{1} {e_2} killed}, or in English, \emph{e_{2} killed e{1}} (scrambled).
 
 \subsection{Nan-*-ka-no-N}
+\emph{Nan-*-ka-no-N} is an existential quantifier that means \emph{some *}. The * refers to a measure word that is used in combination with Wh, a QP (quantifier particle \emph{ka}), genitive case, and noun that the measure word refers to. In English, one would refer to words like \emph{water} or \emph{furniture}, which are invalid when counted without a measure word. On the other hand, in Japanese, numerals usually cannot quantify nouns by themselves. Although this has a similar structure to the distributive-key universal classifier \emph{dono-N-mo}, this is an existential quantifier; the rules that apply to \emph{nan-*-ka-no-N} are different. 
+\begin {exe}
+	\ex 
+		\begin {xlist}
+			\ex *There are three waters in the glass.
+			\ex There are three \underline{drops of water} in the glass.
+			\ex *There are two furniture in the room.
+			\ex There are two \underline{pieces of furniture} in the room.
+	\end {xlist}
+\end {exe}
 \begin{exe}
 	\ex 
 	\begin{xlist}
@@ -428,31 +441,24 @@ As demonstrated in (?),
 			\trans `Some students met every professor.' }\label{1b}
 	\end{xlist}
 \end{exe}
-\vs
 
 \subsection{Summary}
+The newly reviewed universal quantifiers and their traits can be seen in Figure 8. Interestingly enough, a quantifier like \emph{sorezore-no}, which does not follow the same crosslinguistically unique structure that the distributive-key quantifier \emph{dono-N-mo} has, despite being a distributive-key quantifier. 
+\vs
+\begin{figure}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
 \multicolumn{3}{|c||}{Japanese UQ} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
-	\hline & Dono N-mo 	 & & $\ast$ & $\checkmark$ \\
+	\hline & Dono N-mo 	 & & $\checkmark$ & $\ast$ \\
+	\hline & Sorezore-no 	 & & $\checkmark$ & $\ast$ \\
 	\hline & Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
 	\hline & Zenbu-no 	& & $\checkmark$ & $\checkmark$ \\
-	\hline & Minna		 	& & $\checkmark$ & $\checkmark$ \\
 	\hline 
-\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
-
-\begin{center}
-\scalebox{1}[1]{\begin{tabular}{|l|c|c|c|p{5cm}|} \hline
-	\sc{Student Q} & \sc{Plural} & \sc{Pizza Q} & \sc{LF} & \sc{Meaning} \\ \hline
-	Aru+N & $\xmark$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{1 student ate 1 pizza}$ \\ \hline
-	Aru+N & $-tati$ & $\text{Aru+N}$ & $\onemeaning$ & $\text{2+ students ate 1 pizza together}$ \\ \hline
-	Aru+N & $\xmark$ & $\text{Sorezore-no}$ & $\onemeaning$ & $\text{1 student ate 1 pizza}$ \\ \hline
-	Aru+N & $-tati$ & $\text{Sorezore-no}$ & $\onemeaning$ & $\text{2+ student ate 1 pizza together}$ \\ \hline
-	Aru+N & $\xmark$ & $\text{Nan-mai-ka-no}$ & $\onemeaning$ & $\text{1 student ate some number of pizzas}$ \\ \hline
-	Aru+N & $-tati$ & $\text{Nan-mai-ka-no}$ & $\onemeaning$ & $\text{2+ students ate some number of pizzas together}$ \\ \hline
-\end{tabular}}
+\end{tabular}} \renewcommand*\arraystretch{1} 
+\captionsetup{labelfont=bf}
+\caption[labelfont=bf]{Universal Quantifiers and Interpretations III (Japanese)}
 \end{center}
-
+\end{figure}
 \section{Conclusion}
 
 \vs

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JUN 2019 03:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JUN 2019 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1256,12 +1256,6 @@ LaTeX Warning: Label `1a' multiply defined.
 LaTeX Warning: Label `1b' multiply defined.
 
 
-LaTeX Warning: Label `1a' multiply defined.
-
-
-LaTeX Warning: Label `1b' multiply defined.
-
-
 LaTeX Warning: Label `1b' multiply defined.
 
 
@@ -1269,9 +1263,6 @@ LaTeX Warning: Label `1b' multiply defined.
 
 
 LaTeX Warning: Label `1a' multiply defined.
-
-
-LaTeX Warning: Label `1b' multiply defined.
 
 
 LaTeX Warning: Label `1a' multiply defined.
@@ -1434,47 +1425,30 @@ LaTeX Font Info:    Font shape `OMS/bch/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
 
 [5] [6] [7]
-Overfull \hbox (13.88286pt too wide) in paragraph at lines 451--451
-[]|$[]$| 
- []
-
-
-Overfull \hbox (9.50287pt too wide) in paragraph at lines 451--451
-[]|$[]$| 
- []
-
-
-Overfull \hbox (33.11105pt too wide) in paragraph at lines 451--451
-[]|$[]$| 
- []
-
-
-Overfull \hbox (89.7115pt too wide) in paragraph at lines 451--451
-[]|$[]$| 
- []
-
-[8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+ [8] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
  (./Semantics Final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 489.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 489.
 Package rerunfilecheck Info: File `"Semantics Final".out' has not changed.
-(rerunfilecheck)             Checksum: 70A712A1C23EBC3F81119CE1C3CF2B57;1052.
+(rerunfilecheck)             Checksum: ACC72C688A0376C42DCBD9BD47186D2E;997.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
  ) 
 Here is how much of TeX's memory you used:
- 21564 strings out of 492995
- 380256 string characters out of 6132704
- 476859 words of memory out of 5000000
- 24580 multiletter control sequences out of 15000+600000
+ 21822 strings out of 492995
+ 384930 string characters out of 6132704
+ 481340 words of memory out of 5000000
+ 24831 multiletter control sequences out of 15000+600000
  44969 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,57p,1019b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,57p,1019b,994s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive
@@ -1485,10 +1459,10 @@ ive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "./Semantics Final.pdf" (9 pages, 110563 bytes).
+Output written on "./Semantics Final.pdf" (10 pages, 116553 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 110 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 276 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
