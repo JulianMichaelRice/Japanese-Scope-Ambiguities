@@ -6,4 +6,4 @@ Scope ambiguities are a commonly seen and reviewed problem when covering the sem
 Japanese's subject-object-verb (SOV) sentence structure is canonical, meaning that only a subject wide interpretation (deemed as S>O) is available. The noun within the subject of the sentence acts as the entity that actively affects the object with the verb of the sentence. On the other hand, scrambling in Japanese, which involves switching the word order of a sentence without switching its core meaning, produces ambiguous sentences. This ambiguity only takes place when there is an existentially quantified subject and universally quantified object seen in the SOV sentence and scrambled - this is known as a QP-QP sentence.
 
 Learn more by checking out the full paper below:
-![](https://github.com/JulianMichaelRice/Japanese-Scope-Ambiguities/raw/master/Semantics%20Final.pdf)
+![Download Paper](https://github.com/JulianMichaelRice/Japanese-Scope-Ambiguities/raw/master/Semantics%20Final.pdf)
