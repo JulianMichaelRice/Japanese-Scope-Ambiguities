@@ -46,6 +46,7 @@
 \cfoot{}
 \rhead{Julian M. Rice}	  %Right Header
 \lhead{Scope Ambiguities in Japanese}  %left header
+\topmargin -0.5in
 \title{Scope Ambiguities in Japanese\\
   \large Linguistics 165C: Semantics II
 }	%Title
@@ -55,20 +56,20 @@
 %\subsection{And you can have subsections too!}
 
 \section{Introduction}
-Scope ambiguities are a commonly seen and reviewed problem when covering the semantics of languages like English. The question then arises - what scope ambiguities exist for an entirely different language, like Japanese? This paper is aiming to introduce scope ambiguities and analyze different quantifiers in Japanese and provide details on the differences between these quantifiers. First and foremost, a quantifier is defined as a linguistic expression that specify or quantify a set (source). In English, examples of quantifiers include all, every, some, few, and exactly two. Quantifiers indicate the scope of a term, usually a noun or pronoun, to which it is attached to; this intrinsically brings potential sentence ambiguity to the table. Ambiguity can be considered the presence of two or more meanings in a sentence - two meanings represents two different logical forms (LF), or syntax trees that can be drawn from a single sentence. This is demonstrated in the following English sentence:
+Scope ambiguities are a commonly seen and reviewed problem when covering the semantics of languages like English. The question then arises - what scope ambiguities exist for an entirely different language like Japanese? This paper is aiming to introduce scope ambiguities, analyze different quantifiers in Japanese, and provide details on the differences between some of these quantifiers. First and foremost, a quantifier is defined as a linguistic expression that specify or quantify a set (source). In English, examples of quantifiers include all, every, some, few, and exactly two. Quantifiers indicate the scope of a term, usually a noun or pronoun, to which it is attached to; this inherently brings potential sentence ambiguity to the table. Ambiguity can be considered the presence of two or more meanings in a sentence - the two meanings are represented by two different logical forms (LF), or syntax trees that can be drawn from a single sentence. Because the logical forms have different underlying forms, the syntax trees that can be drawn from each form is different. This is demonstrated in the following English sentences:
 
 \begin {exe}
 	\ex 
 		\begin {xlist}
 			\ex Every student met some professor.
 			\begin {xlist} 
-				\ex \textbf{LF1}: Every single student met some professor, not necessarily the same one.
-				\ex \textbf{LF2}: Every single student met the same professor.
+				\ex \textbf{LF1}: Every student met some professor, not necessarily the same one. (Eq 1)
+				\ex \textbf{LF2}: Every student met the same professor. (Eq 2)
 			\end {xlist}
 			\ex Some student met every professor.
 				\begin {xlist} 
-					\ex \textbf{LF1}: Some specific student met every single professor.
-					\ex \textbf{LF2}: For every professor there is, each one met some student.
+					\ex \textbf{LF1}: Some specific student met every single professor. (Eq 3)
+					\ex \textbf{LF2}: For every professor there is, each one met some student. (Eq 4)
 				\end {xlist}
 	\end {xlist}
 \end {exe}
@@ -78,7 +79,13 @@ Scope ambiguities are a commonly seen and reviewed problem when covering the sem
 \begin{equation}
 	\llbracket  \text{[Some\:professor]}_{2}\:\text{[every\:student]}_{1}\:[e_{1}\:\text{met}\:e_{2}] \rrbracket \quad
 \end{equation}
-(1a-i) and (1b-i) show us that the first logical form, or LF1, places the emphasis on the subject. Equation (1) describes the underlying form for LF1 of (1a-i), whereas equation (2) describes the underlying form for LF2 of (1a-ii). The full syntax trees for (1a) is displayed on Figure 1 (next page), showing the appropriate quantifier raising for the differing logical forms. In LF1, \emph{some professor} is raised first, which is then followed by the raising of \emph{every student}. This creates a subject-wide interpretation, where 
+\begin{equation}
+	\llbracket  \text{[Some\:student]}_{1}\:\text{[every\:professor]}_{2}\:[e_{1}\:\text{met}\:e_{2}] \rrbracket \quad
+\end{equation}
+\begin{equation}
+	\llbracket  \text{[Every\:professor]}_{2}\:\text{[some\:student]}_{1}\:[e_{1}\:\text{met}\:e_{2}] \rrbracket \quad
+\end{equation}
+(1a-i) and (1b-i) show us that the first logical form, or LF1, places the emphasis on the subject. Equation (1) describes the underlying form for LF1 of (1a-i), whereas equation (2) describes the underlying form for LF2 of (1a-ii). Likewise, (1a-ii) and (1b-ii) show LF2, which places emphasis on the object. Equation (3) and (4) describe the differing logical forms for (1b). The full syntax trees for (1a) is displayed on Figure 1 (next page), showing the appropriate quantifier raising for the differing logical forms. 
 
 % FIGURE 1: Scope Ambiguities in English (LF1 and LF2)
 \begin{figure}[!h]
@@ -101,7 +108,7 @@ Scope ambiguities are a commonly seen and reviewed problem when covering the sem
 \section{Scrambling and Ambiguity in Japanese}
 %------------------------------------------------------------
 \subsection{Standard SOV and Scrambled OSV Scope Ambiguity}
-Japanese's subject-object-verb (SOV) sentence structure is canonical, meaning that only a subject wide interpretation (deemed as S>O) is available. The noun within the subject of the sentence acts as the entity that actively affects the object with the verb of the sentence. On the other hand, scrambling in Japanese, which involves switching the word order of a sentence without switching its core meaning, produces ambiguous sentences. This ambiguity only takes place when there is an existentially quantified subject and universally quantified object seen in the SOV sentence and scrambled - this is known as a QP-QP sentence (\cite{s1}).
+Japanese's subject-object-verb (SOV) sentence structure is canonical, meaning that only a subject wide interpretation (deemed as S>O) is available. The noun within the subject of the sentence acts as the entity that actively affects the object with the verb of the sentence. On the other hand, scrambling in Japanese, which involves switching the word order of a sentence without switching its core meaning, produces ambiguous sentences. This ambiguity only takes place when there is an existentially quantified subject and universally quantified object seen in the SOV sentence and scrambled - this is known as a QP-QP sentence (\cite{s2}).
 
 \begin{exe}
 	\ex 
@@ -161,7 +168,7 @@ In (2a) and (2b), we compare the standard SOV Japanese sentence (2a) with the sc
 				\end {xlist}
 		\end {xlist}
 \end {exe}
-Sentences in (4) further demonstrate this addition of ambiguity through scrambling. This time, however, the noun \emph{student} is added to the subject, and object has also been modified to show the ambiguity in another context. (4a) is the SOV sentence and (5a) shows that, like seen in (2a) and (3a), subject wide interpretation is accepted but object wide interpretation is not. In the scrambled OSV sentence (4b), (5b) shows scope ambiguity by indicating that both interpretations are valid. The syntactic tree structure with quantify raising for (4b) is shown below in Figure 2 and its two respective underlying forms are shown in equation (3) and (4). Our current findings are summarized in Figure 3.
+Sentences in (4) further demonstrate this addition of ambiguity through scrambling. This time, however, the noun \emph{student} is added to the subject, and object has also been modified to show the ambiguity in another context. (4a) is the SOV sentence and (5a) shows that, like seen in (2a) and (3a), subject wide interpretation is accepted but object wide interpretation is not. In the scrambled OSV sentence (4b), (5b) shows scope ambiguity by indicating that both interpretations are valid. The syntactic tree structure with quantify raising for (4b) is shown below in Figure 2 and its two respective underlying forms are shown in equations (5) and (6). Our current findings are summarized in Figure 3.
 \begin{equation}
 	\llbracket  \text{[Gakusei-no\:dareka-ga]}_{1}\:\text{[dono\:kudamono-mo]}_{2}\:[e_{1}\:e_{2}\:\text{tabe-ta}] \rrbracket \quad
 \end{equation}
@@ -183,13 +190,13 @@ Sentences in (4) further demonstrate this addition of ambiguity through scrambli
 		\draw [thin, dashed, ->] (3) .. controls +(south:2) and +(south:4.5) .. (2);
 	\end{tikzpicture}
 \end{figure}
-Figure 2 contains the tree structures for both interpretations of the scrambled OSV sentence in (4b). Both readings are seen in equations (3) and (4) and their explanations are listed in (5b). Sentence (4a) only has one logical form, meaning that although (5a-i) may be represented as a tree structure, (5a-ii) cannot. Notice that despite the scrambling, the underlying form displayed in Figure 2 for logical form 1 has the same underlying form as (4a). This means that scrambling \emph{maintains the original meaning} of the sentence \emph{and} it adds a second, new underlying form to the sentence.
+Figure 2 contains the tree structures for both interpretations of the scrambled OSV sentence in (4b). Both readings are seen in equations (5) and (6) and their explanations are listed in (5b). Sentence (4a) only has one logical form, meaning that although (5a-i) may be represented as a tree structure, (5a-ii) cannot. Notice that despite the scrambling, the underlying form displayed in Figure 2 for logical form 1 has the same underlying form as (4a). This means that scrambling \emph{maintains the original meaning} of the sentence \emph{and} it adds a second, new underlying form to the sentence.
 \begin{figure}[h]
 	\begin{center} \renewcommand*\arraystretch{1.2}
 	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
 	\multicolumn{3}{|c||}{Subject - Object Structure} & \sc{SOV} & \sc{OSV}  \\[0.5ex]
-  	 	\hline & Universal - Existential 	& & $\onemeaning$ & $\twomeaning$ \\
-		\hline & Existential - Universal 	& & $\onemeaning$ & $\onemeaning$ \\
+  	 	\hline & Universal - Existential 	& & $\onemeaning$ & $\onemeaning$ \\
+		\hline & Existential - Universal 	& & $\onemeaning$ & $\twomeaning$ \\
    	 	\hline 
 	\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 	\vspace*{-5mm}
@@ -240,7 +247,7 @@ The reason why \emph{every} in the object position allows scope ambiguity and \e
 				\end {xlist}
 	\end {xlist}
 \end {exe}
-The other kind of interpretation that applies to universal quantifiers is \emph{distributive interpretation}. This is defined as: a QP $\alpha$ occurring in a sentence \emph{S} supports a distributive interpretation if, under the reading, we can construe individual elements in the domain of $\alpha$ to co-vary with (the witness of) another quantifier $\beta$ that also occurs in the logical form of \emph{S} (\cite{s3}). The two variations in (7) show that \emph{all} in the subject position allows for collective interpretation, whereas \emph{every} in the subject position does not.
+The other kind of interpretation that applies to universal quantifiers is \emph{distributive interpretation}. This is defined as: a QP $\alpha$ occurring in a sentence \emph{S} supports a distributive interpretation if, under the reading, we can construe individual elements in the domain of $\alpha$ to co-vary with (the witness of) another quantifier $\beta$ that also occurs in the logical form of \emph{S} (\cite{s1}). The two variations in (7) show that \emph{all} in the subject position allows for collective interpretation, whereas \emph{every} in the subject position does not.
 \begin{figure}[h]
 	\begin{center} \renewcommand*\arraystretch{1.2}
 	\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
@@ -312,7 +319,7 @@ The sentences in (8) show the difference between using a Japanese quantifier (su
 % Introduce two prenominal universal quantifiers (subete-no, zenbu-no)
 % Talk about how this is DI and CI
 % Draw out a simple table with DI / CI for dono-N-mo and subete-no, as well as zenbu-no
-According to research done by (\cite{s1}) and (\cite{s1}), there are two types of universal quantifiers in Japanese. One type is the \emph{simple universal quantifier}, which is a quantifier that permits a variety of scope relations. Previously used terminology would imply that simple universal quantifiers are quantifiers that allow for both a collective and distributive interpretation. In Japanese, examples of this type of quantifier include \emph{subete-no}, \emph{zenbu-no}, and \emph{minna}, which all roughly translate to the English \emph{all}. 
+According to research done by (\cite{s2}) and (\cite{s4}), there are two types of universal quantifiers in Japanese. One type is the \emph{simple universal quantifier}, which is a quantifier that permits a variety of scope relations. Previously used terminology would imply that simple universal quantifiers are quantifiers that allow for both a collective and distributive interpretation. In Japanese, examples of this type of quantifier include \emph{subete-no}, \emph{zenbu-no}, and \emph{minna}, which all roughly translate to the English \emph{all}. 
 
 Another type of universal quantifier in Japanese is a unique, crosslinguistic \emph{distributive-key universal quantifier}. The structure for this kind of universal quantifier follows a Wh+Noun+QP structure, which requires a noun to be stuck in between a Wh word (like what, when, or how) and a quantifier particle. This special class of quantifiers forces the subject NP within the Wh-N-QP structure to have a wide scope (\cite{s3}). This means that the collective interpretation is rendered ungrammatical, and only the distributive interpretation is accepted as a valid meaning for a sentence that uses a distributive-key universal quantifier.
 
@@ -418,7 +425,7 @@ As demonstrated in (11), \emph{Aru-N} seems to either have the English interpret
 Following the scrambled sentence in (12), the universal quantifier \emph{sorezore-no} placed in the front of the sentence allows for an ambiguous (both collective and distributive) reading given that an existential quantifier like \emph{aru-N} is used. When the sentence is not scrambled, the distributive interpretation applies, saying that the same bear killed each hunter. Note that the equations (5) and (6) refer to the placement of each quantifier phrase in the scrambled form of (12), \emph{e_{1} {e_2} killed}, or in English, \emph{e_{2} killed e{1}} (scrambled).
 
 \subsection{Nan-*-ka-no-N}
-\emph{Nan-*-ka-no-N} is an existential quantifier that means \emph{some *}. The * refers to a measure word that is used in combination with Wh, a QP (quantifier particle \emph{ka}), genitive case, and noun that the measure word refers to. In English, one would refer to words like \emph{water} or \emph{furniture}, which are invalid when counted without a measure word. On the other hand, in Japanese, numerals usually cannot quantify nouns by themselves. Although this has a similar structure to the distributive-key universal classifier \emph{dono-N-mo}, this is an existential quantifier; the rules that apply to \emph{nan-*-ka-no-N} are different. 
+\emph{Nan-*-ka-no-N} is an existential quantifier that means \emph{some *}. The * refers to a measure word that is used in combination with Wh, a QP (quantifier particle \emph{ka}), genitive case, and noun that the measure word refers to. 
 \begin {exe}
 	\ex 
 		\begin {xlist}
@@ -428,40 +435,50 @@ Following the scrambled sentence in (12), the universal quantifier \emph{sorezor
 			\ex There are two \underline{pieces of furniture} in the room.
 	\end {xlist}
 \end {exe}
+In English, one would refer to words like \emph{water} or \emph{furniture}, which are invalid when counted without a measure word. This is demonstrated in (14). On the other hand, in Japanese, numerals usually cannot quantify nouns by themselves. Although this has a similar structure to the distributive-key universal classifier \emph{dono-N-mo}, this is an existential quantifier; the rules that apply to \emph{nan-*-ka-no-N} are different. 
 \begin{exe}
 	\ex 
 	\begin{xlist}
 		\ex[]{
-		\gll Aru gakusei-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some student met every professor.' }\label{1a}
+		\gll Nan-hiki-ka-no sakana-ga sorezore-no ryoushi-kara nige-teiru. \\
+			some-*-Gen fish-Nom each-Gen fisherman-from escape-Pres. \\
+			\trans `Some (amount of) fish are escaping from each fisherman.' }\label{1a}
 		\ex[]{
-		\gll Aru gakusei-tati-ga zenbu-no kyoujyu-ni at-ta. \\
-			some student-Pl-Nom every-Gen professor-Dat meet-Past. \\
-			\trans `Some students met every professor.' }\label{1b}
+		\gll Sorezore-no ryoushi-kara nan-hiki-ka-no sakana-ga nige-teiru. \\
+			each-Gen fisherman-from some-*-Gen fish-Nom escape-Pres. \\
+			\trans `Some (amount of) fish are escaping from each fisherman. (scrambled)' }\label{1a}
 	\end{xlist}
 \end{exe}
-
+\begin {exe}
+	\ex Sorezore-no ryoushi-kara nan-hiki-ka-no sakana-ga nige-teiru. (scrambled)
+		\begin {xlist} 
+			\ex \textbf{CI}: Some (same amount of) fish are escaping from each fisherman.
+			\ex \textbf{DI}: Some (different amount of) fish are escaping from each fisherman.
+		\end {xlist}
+\end {exe}
+The ambiguity in (15b) is present given the structure of the sentence and scrambling. One of the meanings that is interpreted is the collective interpretation (16a), which suggests that the \emph{same amount of fish} are escaping from each fisherman. However, the distributive interpretation (16b) also works, suggesting that a different amount of fish \emph{per fisherman} is escaping. It is fascinating that the scope ambiguity can reach quantifiers with different quantities as well. 
+\pagebreak
 \subsection{Summary}
-The newly reviewed universal quantifiers and their traits can be seen in Figure 8. Interestingly enough, a quantifier like \emph{sorezore-no}, which does not follow the same crosslinguistically unique structure that the distributive-key quantifier \emph{dono-N-mo} has, despite being a distributive-key quantifier. 
+The newly reviewed universal quantifiers and their traits can be seen in Figure 8. Interestingly enough, a quantifier like \emph{sorezore-no}, which does not follow the same crosslinguistically unique structure that the distributive-key quantifier \emph{dono-N-mo} has, despite being a distributive-key quantifier. Also, \emph{zenbu-no} has the same features as \emph{subete-no} because of ontological reasons (matching Kanji characters), as they are practically the same word with a different pronunciation.
 \vs
-\begin{figure}
+\begin{figure}[h]
 \begin{center} \renewcommand*\arraystretch{1.2}
-\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\scalebox{1}[1]{\begin{tabular}[!htb]{|rrl||c|c|c|} \hline 
 \multicolumn{3}{|c||}{Japanese UQ} & \sc{Distributive} & \sc{Collective}  \\[0.5ex]
 	\hline & Dono N-mo 	 & & $\checkmark$ & $\ast$ \\
 	\hline & Sorezore-no 	 & & $\checkmark$ & $\ast$ \\
 	\hline & Subete-no 		 & & $\checkmark$ & $\checkmark$ \\
 	\hline & Zenbu-no 	& & $\checkmark$ & $\checkmark$ \\
 	\hline 
-\end{tabular}} \renewcommand*\arraystretch{1} 
-\captionsetup{labelfont=bf}
+\end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+\captionsetup{labelfont=bf} \vspace*{-5mm}
 \caption[labelfont=bf]{Universal Quantifiers and Interpretations III (Japanese)}
-\end{center}
 \end{figure}
-\section{Conclusion}
 
-\vs
+\section{Conclusion}
+The big takeaway here is that syntax and semantics are really interconnected; the ability for sentences in Japanese to get scrambled from SOV to OSV under the condition that the object uses a universal quantifier and the subject uses an existential quantifier leads to ambiguity. On the other hand, English allows for ambiguity when within a QP-QP sentence, a universal quantifier that does not allow a collective interpretation (every, each) is used in tandem with an existential quantifier, regardless of which quantifier is in which position. Even though the Japanese distributive-key quantifier \emph{dono-N-mo} is similar to the English \emph{every} in the sense that it does not allow for a collective interpretation, a scrambled sentence produces scope ambiguity even with \emph{dono-N-mo} only supposedly having one natural interpretation. 
+
+A good idea for further study or research would be to look at the effects of other quantifiers in Japanese, such as \emph{hotondo-no} (most), \emph{dono-M-ga} (which), and \emph{minna} (every (animacy)) to see if there are any other interesting things to learn about the many quantifiers that exist in Japanese.
 
 \begin{thebibliography}{999}
 	\bibitem[Lakoff(1972)]{s1}
